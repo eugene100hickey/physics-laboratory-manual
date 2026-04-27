@@ -1,0 +1,26 @@
+project:
+  type: book
+
+book:
+  title: "physics-laboratory-manual"
+  author: "Norah Jones"
+  date: "27/4/2026"
+  cover-image: images/TU_Dublin_Logo.png
+  chapters:
+    - index.qmd
+    - intro.qmd
+    - summary.qmd
+    - references.qmd
+
+bibliography: references.bib
+
+format:
+  html:
+    theme:
+      - cosmo
+      - brand
+  pdf:
+    documentclass: scrreprt
+
+editor: visual
+
