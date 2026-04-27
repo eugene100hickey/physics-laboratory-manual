@@ -1,0 +1,45 @@
+# Simple Pendulum
+
+Take down the following in to your laboratory copy.
+
+### Title: Simple Pendulum
+
+### Date:
+
+### Partner:
+
+### Data
+
+
+```{r}
+#| warning: false
+#| message: false
+#| echo: false
+#| label: pendulum_table
+
+library(tidyverse)
+library(gt)
+
+z <- tibble(length = seq(0.100, 1.000, by = 0.100) |> signif(digits = 4), 
+            actual_length = rep("", 10), 
+            t20 = rep("", 10), 
+            t1 = rep("", 10), 
+            t1_2 = rep("", 10)
+             )
+
+z |> 
+  gt() |> 
+  cols_label(length = "Length (m)",
+             actual_length = "Actual Length (m)",
+             t20 = md("$T_{20}(s)$"),
+             t1 = md("$T_{1}(s)$"),
+             t1_2 = md("$T_{1}^2(s^2)$")) |> 
+  cols_width(everything() ~ px(200)) |> 
+  fmt_number(columns = length,
+             decimals = 3) |> 
+  cols_align(columns = length,
+             align = "center") |> 
+  tab_options(container.width = 1000)
+
+
+```
