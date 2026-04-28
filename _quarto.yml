@@ -2,13 +2,14 @@ project:
   type: book
 
 book:
-  title: "physics-laboratory-manual"
-  author: "Norah Jones"
+  title: "Physics Laboratory Manual"
+  author: "First Year Science"
   date: "27/4/2026"
   cover-image: images/TU_Dublin_Logo.png
   chapters:
     - index.qmd
     - intro.qmd
+    - pendulum.qmd
     - summary.qmd
     - references.qmd
 
